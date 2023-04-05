@@ -1,13 +1,14 @@
+let counterValue = 0;
 const span = document.getElementById('value');
 function add() {
-    let aktualnaWartosc = Number(span.textContent);
-    let nowaWartosc = aktualnaWartosc + 1;
-    span.textContent = nowaWartosc;
+    let counterValue = Number(span.textContent);
+    let newCounterValue = counterValue + 1;
+    span.textContent = newCounterValue;
   };
 function minus() {
-    let aktualnaWartosc = Number(span.textContent);
-    let nowaWartosc = aktualnaWartosc - 1;
-    span.textContent = nowaWartosc;
+    let counterValue = Number(span.textContent);
+    let newCounterValue = counterValue - 1;
+    span.textContent = newCounterValue;
   };
   document.getElementById('decrementButton').addEventListener('click', minus);
   document.getElementById('incrementButton').addEventListener('click', add);
