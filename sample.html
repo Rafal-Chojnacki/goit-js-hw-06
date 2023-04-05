@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dodawanie 1 po kliknięciu przycisku</title>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    function dodajJeden() {
+      var poleTekstowe = document.getElementById("liczba");
+      var aktualnaWartosc = poleTekstowe.value;
+      var nowaWartosc = parseInt(aktualnaWartosc) + 1;
+      poleTekstowe.value = nowaWartosc;
+    }
+  </script>
+</head>
+<body>
+  <label for="liczba">Wpisz liczbę:</label>
+  <input type="text" id="liczba" name="liczba"><br><br>
+  <button onclick="dodajJeden()">Dodaj 1</button>
+</body>
+</html>
+
+
+
+
+
+
