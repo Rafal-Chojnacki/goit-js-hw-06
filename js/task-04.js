@@ -1,14 +1,14 @@
 let counterValue = 0;
 const span = document.getElementById('value');
 function add() {
-    let counterValue = Number(span.textContent);
-    let newCounterValue = counterValue + 1;
-    span.textContent = newCounterValue;
+    counterValue += 1;
+    span.textContent = counterValue;
+    console.log(counterValue)
   };
 function minus() {
-    let counterValue = Number(span.textContent);
-    let newCounterValue = counterValue - 1;
-    span.textContent = newCounterValue;
+    counterValue -= 1;
+    span.textContent = counterValue;
+    console.log(counterValue)
   };
   document.getElementById('decrementButton').addEventListener('click', minus);
   document.getElementById('incrementButton').addEventListener('click', add);
