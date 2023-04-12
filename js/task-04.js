@@ -1,5 +1,5 @@
 let counterValue = 0;
-const span = document.getElementById('value');
+const span = document.querySelector('#value');
 function add() {
     counterValue += 1;
     span.textContent = counterValue;
@@ -10,5 +10,5 @@ function minus() {
     span.textContent = counterValue;
     console.log(counterValue)
   };
-  document.getElementById('decrementButton').addEventListener('click', minus);
-  document.getElementById('incrementButton').addEventListener('click', add);
+  document.querySelector('#decrementButton').addEventListener('click', minus);
+  document.querySelector('#incrementButton').addEventListener('click', add);
