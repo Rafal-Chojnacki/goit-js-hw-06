@@ -8,7 +8,9 @@ const ingredients = [
 ];
 const list = document.querySelector("#ingredients");
 for (const ingredient of ingredients) {
-  const firstItem = document.createElement("li");
-  firstItem.textContent = ingredient;
-  list.append(firstItem);
+  const element = document.createElement("li");
+  element.textContent = ingredient;
+  list.append(element);
+  element.classList.add("item")
 }
+console.log(list)
