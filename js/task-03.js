@@ -12,7 +12,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const list = document.querySelector('.gallery')
+const list = document.querySelector('.gallery');
+const imageWidth = 1260;
+list.style.styleList = 'none';
 for (const image of images) {
-  list.insertAdjacentHTML("beforeend", `<li><img src="${image.url}" alt="${image.alt}"></li>` );
+  list.insertAdjacentHTML("beforeend", `<li><img src="${image.url}" alt="${image.alt}" width=${imageWidth / 2}></li>` );
+  list.style.listStyleType = 'none';
+  list.style.display = 'flex';
+  list.style.justifyContent = 'center';
+  list.style.alignItems = 'center';
+  list.style.flexDirection = 'column';
 }
