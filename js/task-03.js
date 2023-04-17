@@ -13,13 +13,18 @@ const images = [
   },
 ];
 const list = document.querySelector('.gallery');
-const imageWidth = 1260;
-list.style.styleList = 'none';
-for (const image of images) {
-  list.insertAdjacentHTML("beforeend", `<li><img src="${image.url}" alt="${image.alt}" width=${imageWidth / 2}></li>` );
   list.style.listStyleType = 'none';
   list.style.display = 'flex';
   list.style.justifyContent = 'center';
   list.style.alignItems = 'center';
   list.style.flexDirection = 'column';
+  const pictures = []
+for (const image of images) {
+  const element = document.createElement('li');
+  const picture = document.createElement('img')
+  picture.setAttribute('src', image.url);
+  picture.setAttribute('width', '1000px')
+  element.appendChild(picture)
+  pictures.push(element)
 }
+list.append(...pictures)

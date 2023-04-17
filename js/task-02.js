@@ -11,6 +11,6 @@ const elements = [];
 for (let ingredient of ingredients ) {
   const element = document.createElement('li');
   element.textContent = ingredient
-  elements.push(element.textContent)
+  elements.push(element)
 }
-ulList.append(elements)
+ulList.append(...elements)

@@ -10,13 +10,14 @@ function getValue() {
   const amount = numberOfBoxes.value;
   return amount;
 }
-const create = document.querySelector('[data-create]');
-create.addEventListener('click' , createButtonClick);
 
-function createButtonClick() {
+const create = document.querySelector('[data-create]');
+create.addEventListener('click', function() {
   const amount = getValue();
   createBoxes(amount);
-}
+});
+
+
 let size = 30;
 function createBoxes(amount) {
   for (let i=0; i<amount; i++) {
