@@ -31,11 +31,8 @@ function createBoxes(amount) {
   }
 }
 const destroy = document.querySelector('[data-destroy]');
-destroy.addEventListener('click' , destroyButtonClick);
+destroy.addEventListener('click' , function(){destroyBoxes()});
 
-function destroyButtonClick() {
-  destroyBoxes();
-}
 
 function destroyBoxes() {
       while (divOfBoxes.firstChild) {

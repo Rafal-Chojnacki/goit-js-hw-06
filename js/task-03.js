@@ -18,13 +18,11 @@ const list = document.querySelector('.gallery');
   list.style.justifyContent = 'center';
   list.style.alignItems = 'center';
   list.style.flexDirection = 'column';
-  const pictures = []
+const imageWidth = 1260;
+const pictures = [];
 for (const image of images) {
-  const element = document.createElement('li');
-  const picture = document.createElement('img')
-  picture.setAttribute('src', image.url);
-  picture.setAttribute('width', '1000px')
-  element.appendChild(picture)
-  pictures.push(element)
+  const picture = document.createElement('li')
+  picture.insertAdjacentHTML("beforeend", `<img src="${image.url}" alt="${image.alt}" width=${imageWidth / 2}>` );
+  pictures.push(picture)
 }
 list.append(...pictures)
